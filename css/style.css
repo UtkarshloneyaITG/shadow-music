@@ -271,16 +271,47 @@
   font-size: 20px;
 }
 
+
+
 .songs-grid {
   display: grid;
-  grid-template-columns: repeat(3, 320px);
+  grid-template-columns: repeat(3, 310px);
   row-gap: 20px;
   column-gap: 20px;
   font-family: shadow;
+  overflow: auto;
+  padding: 10px 15px;
+  height: 250px;
 }
+
+.songs-grid::-webkit-scrollbar {
+  display: none;
+}
+
 
 .page-content .heading {
   padding: 20px 10px;
   font-size: 25px;
   color: white;
+}
+
+.placeholder-animetion {
+
+  background: linear-gradient(to right, #000000, #434343, #000000);
+  background-size: 400% 400%;
+  animation: movingplaceholder 1s ease infinite;
+}
+
+@keyframes movingplaceholder {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
